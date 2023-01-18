@@ -14,7 +14,7 @@ public class Main {
         System.out.println(num);
 
 
-        Coins us = Coins.USD
+        Coins us = Coins.USD;
         if (us == Coins.USD){
             System.out.println("Dollar selected");
         }
