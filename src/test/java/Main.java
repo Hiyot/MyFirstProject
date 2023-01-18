@@ -1,16 +1,29 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        USD first = new USD();
-        System.out.println(first.getValue());
+        System.out.println("Welcome to currncy convert");
 
-        ILS second = new ILS();
-        System.out.println(second.getValue());
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please choose an option 1/2: ");
+        System.out.println("1.Dollar to Shekel");
+        System.out.println("2.Shekel to Dollar");
+
+        int num = scan.nextInt();
+        System.out.println(num);
 
 
-        CoinFactory coinFactory = new CoinFactory();
-        Coin myUsd = new USD();
-        Coin myIls = new ILS();
+        Coins us = Coins.USD;
+        if (us == Coins.USD){
+            System.out.println("Dollar selected");
+        }
+        Coins il = Coins.ILS;
+        if (il == Coins.ILS){
+            System.out.println("Shekel selected");
+        }
+
+
     }
 
 
