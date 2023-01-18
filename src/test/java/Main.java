@@ -6,6 +6,11 @@ public class Main {
 
         ILS second = new ILS();
         System.out.println(second.getValue());
+
+
+        CoinFactory coinFactory = new CoinFactory();
+        Coin myUsd = new USD();
+        Coin myIls = new ILS();
     }
 
 
