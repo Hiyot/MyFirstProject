@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -5,23 +6,29 @@ public class Main {
 
         System.out.println("Welcome to currncy convert");
 
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Please choose an option 1/2: ");
-        System.out.println("1.Dollar to Shekel");
-        System.out.println("2.Shekel to Dollar");
+        int num = 0;
+        try {
+            Scanner scan = new Scanner(System.in);
+            num = scan.nextInt();
+            System.out.println("Please choose an option (1/2):");
+            System.out.println("1.Dollar to Shekel");
+            System.out.println("2.Shekel to Dollar");
 
-        int num = scan.nextInt();
-        System.out.println(num);
 
-
-        Coins us = Coins.USD;
-        if (us == Coins.USD){
-            System.out.println("Dollar selected");
+            System.out.println(num);
+        } catch (ArrayIndexOutOfBoundsException | InputMismatchException e){
+            System.out.println("invalid choise please print again");
         }
-        Coins il = Coins.ILS;
-        if (il == Coins.ILS){
-            System.out.println("Shekel selected");
+
+        Coins coins = Coins.values()[num - 1];
+        System.out.println(coins);
+        if (coins == Coins.USD){
+
         }
+        else if (coins == Coins.ILS){
+
+        }
+
 
 
     }

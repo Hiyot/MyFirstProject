@@ -1,5 +1,5 @@
 
 public enum Coins {
-    ILS,
     USD,
+    ILS
 }
